@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://florianEls.github.io/GemenosApp",
+  "homepage": "https://Nairolf13.github.io/GemenosApp",
   "dependencies": {
     "react": "^19.1.0",
     "react-calendar": "^6.0.0",
