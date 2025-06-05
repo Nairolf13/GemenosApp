@@ -18,9 +18,8 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-section">
           <div className="logo">
-            <div className="logo-circle">
-              <span className="logo-text">Mairie de Gémenos</span>
-            </div>
+            <img src="./imgs/gemenosLogo.webp" alt="Logo Gémenos" className="logo-image" />
+            <span className="logo-text">Mairie de Gémenos</span>
           </div>
         </div>
         
@@ -36,7 +35,7 @@ const Header = () => {
             <li><Link to="/services" className="nav-link">Services</Link></li>
             <li><Link to="/agriculture" className="nav-link">Agriculture</Link></li>
             <li><Link to="/transparence" className="nav-link">Transparence</Link></li>
-            <li><Link to="/commerces" className="nav-link">Commerces locaux</Link></li>
+            <li><Link to="/commerces" className="nav-link">Commerces</Link></li>
             <li><Link to="/suggestions" className="nav-link">Suggestions</Link></li>
             <li><Link to="/agenda" className="nav-link">Agenda</Link></li>
             <li><Link to="/actualites" className="nav-link">Actualités</Link></li>

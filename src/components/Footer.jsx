@@ -8,10 +8,11 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3>Mairie de Gémenos</h3>
-            <p>Place Gabriel Péri</p>
+            <p>Place du Général de Gaulle</p>
             <p>13420 Gémenos</p>
-            <p>Tél : 04 42 32 88 00</p>
-            <p>Fax : 04 42 32 88 01</p>
+            <p>Tél : 04 42 32 89 00</p>
+            <p>Email : <a href="mailto:contactsg@mairie-gemenos.fr">contactsg@mairie-gemenos.fr</a></p>
+            
           </div>
           
           <div className="footer-section">

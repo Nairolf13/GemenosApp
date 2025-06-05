@@ -22,23 +22,33 @@
   align-items: center;
 }
 
-.logo-circle {
-  width: 50px;
-  height: 50px;
-  background-color: #4CAF50;
-  border-radius: 50%;
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+  gap: 12px;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: white;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 
 .logo-text {
-  color: white;
+  color: #2c5530;
   font-weight: bold;
-  font-size: 14px;
-  text-align: center;
+  font-size: 16px;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .nav {
@@ -513,8 +523,13 @@
     padding: 0 15px;
   }
   
+  .logo-image {
+    width: 45px;
+    height: 45px;
+  }
+  
   .logo-text {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -524,13 +539,13 @@
     border-left: none;
   }
   
-  .logo-circle {
-    width: 45px;
-    height: 45px;
+  .logo-image {
+    width: 40px;
+    height: 40px;
   }
   
   .logo-text {
-    font-size: 11px;
+    font-size: 12px;
   }
   
   .mobile-menu-header {
