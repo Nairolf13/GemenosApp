@@ -61,14 +61,12 @@ const Agenda = () => {
     );
   };
 
-  // Fonction pour obtenir les événements d'une date
   const getEventsForDate = (date) => {
     return events.filter(event => 
       event.date.toDateString() === date.toDateString()
     );
   };
 
-  // Fonction pour filtrer les événements par catégorie
   const getFilteredEvents = () => {
     if (selectedCategory === 'Toutes catégories') {
       return events;
@@ -78,7 +76,6 @@ const Agenda = () => {
 
   return (
     <div className="agenda-page">
-      {/* Hero Section */}
       <div className="agenda-hero">
         <div className="agenda-hero-container">
           <h1>Agenda communal</h1>
@@ -87,7 +84,6 @@ const Agenda = () => {
       </div>
 
       <div className="agenda-container">
-        {/* Filtres */}
         <div className="agenda-filters">
           <select 
             value={selectedCategory} 
@@ -117,7 +113,6 @@ const Agenda = () => {
           </div>
         </div>
 
-        {/* Calendrier React Calendar */}
         {viewMode === 'calendar' && (
           <div className="calendar-section">
             <div className="react-calendar-container">
@@ -127,7 +122,6 @@ const Agenda = () => {
                 locale="fr-FR"
                 tileClassName={({ date, view }) => {
                   if (view === 'month') {
-                    // Ajouter une classe pour les jours avec événements
                     if (hasEventsOnDate(date)) {
                       return 'has-event-tile';
                     }
@@ -160,7 +154,6 @@ const Agenda = () => {
               />
             </div>
             
-            {/* Événements du jour sélectionné */}
             {getEventsForDate(selectedDate).length > 0 && (
               <div className="selected-date-events">
                 <h3>
@@ -190,7 +183,6 @@ const Agenda = () => {
           </div>
         )}
 
-        {/* Liste des événements */}
         {viewMode === 'list' && (
           <div className="events-section">
             <h2>Événements à venir</h2>

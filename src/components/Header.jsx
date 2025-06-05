@@ -24,14 +24,12 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Menu burger pour mobile */}
         <button className={`burger-menu ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span className="burger-line"></span>
           <span className="burger-line"></span>
           <span className="burger-line"></span>
         </button>
 
-        {/* Navigation desktop */}
         <nav className="nav desktop-nav">
           <ul className="nav-list">
             <li><Link to="/" className="nav-link">Accueil</Link></li>
@@ -45,7 +43,6 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Actions desktop */}
         <div className="header-actions desktop-actions">
           <div className="search-container">
             <input type="text" placeholder="Rechercher..." className="search-input" />
@@ -55,7 +52,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Menu mobile déroulant */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-overlay" onClick={closeMenu}></div>
         <div className="mobile-menu-content">

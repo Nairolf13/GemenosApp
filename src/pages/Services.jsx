@@ -49,7 +49,6 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      {/* Hero Section */}
       <div className="services-hero">
         <div className="services-hero-container">
           <h1>Services Municipaux</h1>
@@ -58,7 +57,6 @@ const Services = () => {
       </div>
 
       <div className="services-container">
-        {/* Services en ligne */}
         <div className="services-online">
           <h2>Services en ligne disponibles 24h/24</h2>
           <div className="online-services-grid">
@@ -100,7 +98,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Services d'urgence */}
         <div className="urgence-section">
           <h2>🚨 Numéros d'urgence</h2>
           <div className="urgence-grid">
@@ -127,7 +124,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Démarches administratives */}
         <div className="demarches-section">
           <h2>Démarches administratives</h2>
           <div className="demarches-content">

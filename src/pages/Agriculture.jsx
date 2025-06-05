@@ -72,7 +72,6 @@ const Agriculture = () => {
 
   return (
     <div className="agriculture-page">
-      {/* Hero Section */}
       <div className="agriculture-hero">
         <div className="agriculture-hero-container">
           <h1>🌱 Agriculture Partagée</h1>
@@ -81,7 +80,6 @@ const Agriculture = () => {
       </div>
 
       <div className="agriculture-container">
-        {/* Stats Section */}
         <div className="stats-section">
           <div className="stat-card">
             <span className="stat-icon">🏡</span>
@@ -105,9 +103,7 @@ const Agriculture = () => {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="main-content">
-          {/* Formulaire de proposition */}
           <div className="propose-terrain">
             <h2>🏡 Proposer mon terrain</h2>
             <p style={{ marginBottom: '25px', color: '#666' }}>
@@ -238,7 +234,6 @@ const Agriculture = () => {
             </form>
           </div>
 
-          {/* Terrains disponibles */}
           <div className="terrains-disponibles">
             <h2>🌿 Terrains disponibles</h2>
             <p style={{ marginBottom: '25px', color: '#666' }}>
@@ -282,7 +277,6 @@ const Agriculture = () => {
           </div>
         </div>
 
-        {/* Guide Section */}
         <div className="guide-section">
           <h2>📖 Comment ça marche ?</h2>
           <div className="guide-steps">
@@ -309,7 +303,6 @@ const Agriculture = () => {
           </div>
         </div>
 
-        {/* Initiatives Section */}
         <div className="initiatives-section">
           <h2>🌱 Nos initiatives en cours</h2>
           <div className="initiatives-grid">

@@ -135,7 +135,6 @@ const Suggestions = () => {
 
   return (
     <div className="suggestions-page">
-      {/* Hero Section */}
       <div className="suggestions-hero">
         <div className="suggestions-hero-container">
           <h1>Suggestions citoyennes</h1>
@@ -144,7 +143,6 @@ const Suggestions = () => {
       </div>
 
       <div className="suggestions-container">
-        {/* Statistiques */}
         <div className="suggestions-stats">
           <div className="stat-card">
             <div className="stat-number">{suggestions.length}</div>
@@ -164,7 +162,6 @@ const Suggestions = () => {
           </div>
         </div>
 
-        {/* Formulaire de suggestion */}
         <div className="suggestion-form-section">
           <h2>💡 Proposer une nouvelle suggestion</h2>
           <form onSubmit={handleSubmit} className="suggestion-form">
@@ -297,7 +294,6 @@ const Suggestions = () => {
           </form>
         </div>
 
-        {/* Filtres pour les suggestions */}
         <div className="suggestions-filters">
           <h2>📋 Suggestions de la communauté</h2>
           <div className="filters-row">
@@ -324,7 +320,6 @@ const Suggestions = () => {
           </div>
         </div>
 
-        {/* Liste des suggestions */}
         <div className="suggestions-list">
           {filteredSuggestions.map(suggestion => (
             <div key={suggestion.id} className="suggestion-card">
@@ -372,7 +367,6 @@ const Suggestions = () => {
           ))}
         </div>
 
-        {/* Guide d'utilisation */}
         <div className="suggestions-guide">
           <h2>🗂️ Comment bien formuler votre suggestion ?</h2>
           <div className="guide-cards">

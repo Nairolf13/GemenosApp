@@ -7,7 +7,6 @@ const Transparence = () => {
 
   return (
     <div className="transparence-page">
-      {/* Hero Section */}
       <div className="transparence-hero">
         <div className="transparence-hero-container">
           <h1>Transparence Financière</h1>
@@ -16,7 +15,6 @@ const Transparence = () => {
       </div>
 
       <div className="transparence-container">
-        {/* Budget Municipal 2024 */}
         <div className="budget-section">
           <div className="budget-header">
             <h2>Budget Municipal 2024</h2>
@@ -81,7 +79,6 @@ const Transparence = () => {
           </div>
         </div>
 
-        {/* Répartition des dépenses par secteur */}
         <div className="repartition-section">
           <h2>Répartition des dépenses par secteur</h2>
           <div className="repartition-content">
@@ -146,7 +143,6 @@ const Transparence = () => {
           </div>
         </div>
 
-        {/* Dépenses récentes */}
         <div className="depenses-recentes">
           <div className="depenses-header">
             <h2>Dépenses récentes</h2>

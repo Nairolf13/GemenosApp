@@ -134,7 +134,6 @@ const Actualites = () => {
 
   return (
     <div className="actualites-page">
-      {/* Hero Section */}
       <div className="actualites-hero">
         <div className="actualites-hero-container">
           <h1>Actualités de Gémenos</h1>
@@ -143,7 +142,6 @@ const Actualites = () => {
       </div>
 
       <div className="actualites-container">
-        {/* Filtres */}
         <div className="actualites-filters">
           <h2>📰 Toutes les actualités</h2>
           <div className="filter-buttons">
@@ -163,7 +161,6 @@ const Actualites = () => {
           </div>
         </div>
 
-        {/* Actualités importantes */}
         <div className="actualites-importantes">
           <h3>🔥 À ne pas manquer</h3>
           <div className="importantes-grid">
@@ -184,7 +181,6 @@ const Actualites = () => {
           </div>
         </div>
 
-        {/* Liste des actualités */}
         <div className="actualites-grid">
           {filteredActualites.map(actualite => (
             <article key={actualite.id} className="actualite-card">
@@ -226,7 +222,6 @@ const Actualites = () => {
           ))}
         </div>
 
-        {/* Newsletter subscription */}
         <div className="newsletter-section">
           <h3>📬 Restez informé</h3>
           <p>Inscrivez-vous à notre newsletter pour recevoir toutes les actualités de Gémenos</p>
@@ -241,7 +236,6 @@ const Actualites = () => {
         </div>
       </div>
 
-      {/* Modal pour article complet */}
       {selectedArticle && (
         <div className="modal-overlay" onClick={() => setSelectedArticle(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

@@ -6,7 +6,6 @@ const CommercesSociaux = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('Rechercher un commerce');
 
-  // Données des commerces
   const commerces = [
     {
       id: 1,
@@ -77,7 +76,6 @@ const CommercesSociaux = () => {
 
   return (
     <div className="commerces-page">
-      {/* Hero Section */}
       <div className="commerces-hero">
         <div className="commerces-hero-container">
           <h1>Commerces & Artisans Locaux</h1>
@@ -86,7 +84,6 @@ const CommercesSociaux = () => {
       </div>
 
       <div className="commerces-container">
-        {/* Section statistiques */}
         <div className="stats-section">
           <div className="stats-grid">
             <div className="stat-card commerces">
@@ -116,7 +113,6 @@ const CommercesSociaux = () => {
           </div>
         </div>
 
-        {/* Filtres */}
         <div className="filters-section">
           <div className="filters-tabs">
             {['Tous', 'Producteurs', 'Artisans', 'Commerces', 'Services'].map(tab => (
@@ -150,11 +146,9 @@ const CommercesSociaux = () => {
           </div>
         </div>
 
-        {/* Annuaire des commerces */}
         <div className="annuaire-section">
           <h2 className="section-title">Annuaire des commerces</h2>
           
-          {/* Commerces mis en avant */}
           <h3 className="featured-title">Commerces mis en avant</h3>
           <div className="featured-commerces">
             <div className="commerce-card boulangerie">
@@ -205,7 +199,6 @@ const CommercesSociaux = () => {
             </div>
           </div>
 
-          {/* Tous les commerces */}
           <div className="all-commerces">
             <h3 className="featured-title">Tous les commerces</h3>
             <div className="commerces-list">

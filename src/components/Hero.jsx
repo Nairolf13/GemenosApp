@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import '../assets/css/Hero.css';
 
 const Hero = () => {
+  React.useEffect(() => {
+    console.log('Hero component mounted!');
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-container">
