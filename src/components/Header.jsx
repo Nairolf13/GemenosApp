@@ -47,7 +47,6 @@ const Header = () => {
             <input type="text" placeholder="Rechercher..." className="search-input" />
             <button className="search-btn">🔍</button>
           </div>
-          <button className="contact-btn">Contact</button>
         </div>
       </div>
 
@@ -125,9 +124,6 @@ const Header = () => {
               <input type="text" placeholder="Rechercher..." className="mobile-search-input" />
               <button className="mobile-search-btn">🔍</button>
             </div>
-            <button className="mobile-contact-btn" onClick={closeMenu}>
-              📞 Nous contacter
-            </button>
           </div>
         </div>
       </div>

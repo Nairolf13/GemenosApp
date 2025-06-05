@@ -8,12 +8,12 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1300px; /* Augmentation de la largeur maximale */
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 30px; /* Augmentation du padding horizontal */
   height: 70px;
 }
 
@@ -53,7 +53,7 @@
 
 .nav {
   flex: 1;
-  margin: 0 40px;
+  margin: 0 60px; /* Augmentation de la marge pour plus d'espace */
 }
 
 .nav-list {
@@ -61,7 +61,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 30px;
+  gap: 40px; /* Augmentation de l'espacement entre les éléments du menu */
   justify-content: center;
 }
 

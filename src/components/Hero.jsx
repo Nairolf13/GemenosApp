@@ -7,8 +7,13 @@ const Hero = () => {
     console.log('Hero component mounted!');
   }, []);
 
+  const heroStyle = {
+    background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url(${window.location.pathname.includes('/GemenosApp') ? '/GemenosApp/imgs/gemenosMairie.webp' : '/imgs/gemenosMairie.webp'}) center/cover no-repeat`
+  };
+
   return (
-    <section className="hero">
+    <section className="hero" style={heroStyle}>
       <div className="hero-container">
         <h1 className="hero-title">Bienvenue à Gémenos</h1>
         <p className="hero-subtitle">
