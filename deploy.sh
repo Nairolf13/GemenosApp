@@ -3,30 +3,31 @@
 # Script de déploiement pour GitHub Pages
 echo "🚀 Déploiement sur GitHub Pages..."
 
-# Vérifier si on est dans un repo Git
-if [ ! -d ".git" ]; then
-    echo "❌ Ce n'est pas un repository Git!"
-    echo "Initialisez d'abord avec: git init"
+# Nettoyer le build précédent
+echo "🧹 Nettoyage du build précédent..."
+rm -rf dist
+
+# Builder le projet
+echo "🔨 Build du projet..."
+npm run build
+
+# Vérifier que le build a réussi
+if [ ! -d "dist" ]; then
+    echo "❌ Erreur: Le build a échoué"
     exit 1
 fi
 
-# Vérifier si les changements sont commités
-if ! git diff-index --quiet HEAD --; then
-    echo "⚠️  Il y a des changements non commités!"
-    echo "Commitez d'abord vos changements avec:"
-    echo "git add ."
-    echo "git commit -m 'Mise à jour'"
+echo "✅ Build réussi"
+
+# Déployer sur GitHub Pages
+echo "📤 Déploiement sur GitHub Pages..."
+npx gh-pages -d dist -f
+
+if [ $? -eq 0 ]; then
+    echo "✅ Déploiement réussi!"
+    echo "🌐 Votre site sera accessible à: https://Nairolf13.github.io/GemenosApp"
+    echo "⏰ Le déploiement peut prendre 1-5 minutes pour être visible"
+else
+    echo "❌ Erreur lors du déploiement"
+    exit 1
 fi
-
-# Build et déploiement
-echo "📦 Construction de l'application..."
-npm run build
-
-echo "🌐 Déploiement sur GitHub Pages..."
-npm run deploy
-
-echo "✅ Déploiement terminé!"
-echo "🔗 Votre site sera disponible à:"
-echo "https://florianEls.github.io/GemenosApp"
-echo ""
-echo "Note: Il peut falloir quelques minutes pour que les changements soient visibles."
