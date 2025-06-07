@@ -33,7 +33,7 @@ const Agriculture = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Proposition de terrain:', formData);
+    // Traitement de la proposition de terrain
     alert('Merci pour votre proposition ! Nous vous contacterons bientôt.');
   };
 

@@ -1,20 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      
+      // Déterminer si on doit afficher ou masquer le header
+      const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+      
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+    };
+    
+    // Ajouter un écouteur d'événement pour le défilement
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      // Nettoyer l'écouteur d'événement
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const toggleMenu = () => {
+    if (!isMenuOpen) {
+      // Sauvegarder la position de défilement actuelle
+      const scrollY = window.scrollY;
+      document.body.style.top = `-${scrollY}px`;
+      // Ouvrir le menu et bloquer le défilement
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      // Fermer le menu et restaurer le défilement
+      const scrollY = parseInt(document.body.style.top || '0') * -1;
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollY);
+    }
     setIsMenuOpen(!isMenuOpen);
   };
 
   const closeMenu = () => {
+    // Restaurer la position de défilement
+    const scrollY = parseInt(document.body.style.top || '0') * -1;
+    document.body.classList.remove('mobile-menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollY);
     setIsMenuOpen(false);
   };
 
   return (
-    <header className="header">
+    <header className={`header ${visible ? 'header-visible' : 'header-hidden'}`}>
       <div className="header-container">
         <div className="logo-section">
           <div className="logo">

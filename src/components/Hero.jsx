@@ -4,7 +4,7 @@ import '../assets/css/Hero.css';
 
 const Hero = () => {
   React.useEffect(() => {
-    console.log('Hero component mounted!');
+    // Initialisation du composant Hero
   }, []);
 
   const heroStyle = {
@@ -21,8 +21,14 @@ const Hero = () => {
           pour créer un cadre de vie exceptionnel.
         </p>
         <div className="hero-buttons">
-          <Link to="/agenda" className="hero-btn primary">🗓️ Voir l'agenda</Link>
-          <Link to="/suggestions" className="hero-btn secondary">👥 Participer</Link>
+          <Link to="/agenda" className="hero-btn primary">
+            <span className="hero-btn-icon">🗓️</span>
+            <span className="hero-btn-text">Voir l'agenda</span>
+          </Link>
+          <Link to="/suggestions" className="hero-btn secondary">
+            <span className="hero-btn-icon">👥</span>
+            <span className="hero-btn-text">Participer</span>
+          </Link>
         </div>
       </div>
     </section>

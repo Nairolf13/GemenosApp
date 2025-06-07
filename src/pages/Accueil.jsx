@@ -5,7 +5,7 @@ import News from '../components/News';
 
 const Accueil = () => {
   React.useEffect(() => {
-    console.log('Accueil component mounted!');
+    // Initialisation du composant Accueil
   }, []);
 
   return (
